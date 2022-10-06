@@ -1,0 +1,997 @@
+lens: wellarchitected
+security: 
+  - label: SEC 1
+    question_id: securely-operate
+    title: How do you securely operate your workload?
+    answers: 
+      - id: sec_securely_operate_multi_accounts
+        title: Separate workloads using accounts
+      - id: sec_securely_operate_aws_account
+        title: Secure AWS account
+      - id: sec_securely_operate_control_objectives
+        title: Identify and validate control objectives
+      - id: sec_securely_operate_updated_threats
+        title: Keep up to date with security threats
+      - id: sec_securely_operate_updated_recommendations
+        title: Keep up to date with security recommendations
+      - id: sec_securely_operate_test_validate_pipeline
+        title: Automate testing and validation of security controls in pipelines
+      - id: sec_securely_operate_threat_model
+        title: Identify and prioritize risks using a threat model
+      - id: sec_securely_operate_implement_services_features
+        title: Evaluate and implement new security services and features regularly
+      - id: sec_securely_operate_no
+        title: None of these
+  - label: SEC 2
+    question_id: identities
+    title: How do you manage identities for people and machines?
+    answers: 
+      - id: sec_identities_enforce_mechanisms
+        title: Use strong sign-in mechanisms
+      - id: sec_identities_unique
+        title: Use temporary credentials
+      - id: sec_identities_secrets
+        title: Store and use secrets securely
+      - id: sec_identities_identity_provider
+        title: Rely on a centralized identity provider
+      - id: sec_identities_audit
+        title: Audit and rotate credentials periodically
+      - id: sec_identities_groups_attributes
+        title: Leverage user groups and attributes
+      - id: sec_identities_no
+        title: None of these
+  - label: SEC 3
+    question_id: permissions
+    title: How do you manage permissions for people and machines?
+    answers: 
+      - id: sec_permissions_define
+        title: Define access requirements
+      - id: sec_permissions_least_privileges
+        title: Grant least privilege access
+      - id: sec_permissions_emergency_process
+        title: Establish emergency access process
+      - id: sec_permissions_continuous_reduction
+        title: Reduce permissions continuously
+      - id: sec_permissions_define_guardrails
+        title: Define permission guardrails for your organization
+      - id: sec_permissions_lifecycle
+        title: Manage access based on life cycle
+      - id: sec_permissions_analyze_cross_account
+        title: Analyze public and cross account access
+      - id: sec_permissions_share_securely
+        title: Share resources securely
+      - id: sec_permissions_no
+        title: None of these
+  - label: SEC 4
+    question_id: detect-investigate-events
+    title: How do you detect and investigate security events?
+    answers: 
+      - id: sec_detect_investigate_events_app_service_logging
+        title: Configure service and application logging
+      - id: sec_detect_investigate_events_analyze_all
+        title: Analyze logs, findings, and metrics centrally
+      - id: sec_detect_investigate_events_auto_response
+        title: Automate response to events
+      - id: sec_detect_investigate_events_actionable_events
+        title: Implement actionable security events
+      - id: sec_detect_investigate_events_no
+        title: None of these
+  - label: SEC 5
+    question_id: network-protection
+    title: How do you protect your network resources?
+    answers: 
+      - id: sec_network_protection_create_layers
+        title: Create network layers
+      - id: sec_network_protection_layered
+        title: Control traffic at all layers
+      - id: sec_network_protection_auto_protect
+        title: Automate network protection
+      - id: sec_network_protection_inspection
+        title: Implement inspection and protection
+      - id: sec_network_protection_no
+        title: None of these
+  - label: SEC 6
+    question_id: protect-compute
+    title: How do you protect your compute resources?
+    answers: 
+      - id: sec_protect_compute_vulnerability_management
+        title: Perform vulnerability management
+      - id: sec_protect_compute_reduce_surface
+        title: Reduce attack surface
+      - id: sec_protect_compute_implement_managed_services
+        title: Implement managed services
+      - id: sec_protect_compute_auto_protection
+        title: Automate compute protection
+      - id: sec_protect_compute_actions_distance
+        title: Enable people to perform actions at a distance
+      - id: sec_protect_compute_validate_software_integrity
+        title: Validate software integrity
+      - id: sec_protect_compute_no
+        title: None of these
+  - label: SEC 7
+    question_id: data-classification
+    title: How do you classify your data?
+    answers: 
+      - id: sec_data_classification_identify_data
+        title: Identify the data within your workload
+      - id: sec_data_classification_define_protection
+        title: Define data protection controls
+      - id: sec_data_classification_auto_classification
+        title: Automate identification and classification
+      - id: sec_data_classification_lifecycle_management
+        title: Define data lifecycle management
+      - id: sec_data_classification_no
+        title: None of these
+  - label: SEC 8
+    question_id: protect-data-rest
+    title: How do you protect your data at rest?
+    answers: 
+      - id: sec_protect_data_rest_key_mgmt
+        title: Implement secure key management
+      - id: sec_protect_data_rest_encrypt
+        title: Enforce encryption at rest
+      - id: sec_protect_data_rest_automate_protection
+        title: Automate data at rest protection
+      - id: sec_protect_data_rest_access_control
+        title: Enforce access control
+      - id: sec_protect_data_rest_use_people_away
+        title: Use mechanisms to keep people away from data
+      - id: sec_protect_data_rest_no
+        title: None of these
+  - label: SEC 9
+    question_id: protect-data-transit
+    title: How do you protect your data in transit?
+    answers: 
+      - id: sec_protect_data_transit_key_cert_mgmt
+        title: Implement secure key and certificate
+               management
+      - id: sec_protect_data_transit_encrypt
+        title: Enforce encryption in transit
+      - id: sec_protect_data_transit_auto_unintended_access
+        title: Automate detection of unintended data
+               access
+      - id: sec_protect_data_transit_authentication
+        title: Authenticate network communications
+      - id: sec_protect_data_transit_no
+        title: None of these
+  - label: SEC 10
+    question_id: incident-response
+    title: How do you anticipate, respond to, and recover from incidents?
+    answers: 
+      - id: sec_incident_response_identify_personnel
+        title: Identify key personnel and external resources
+      - id: sec_incident_response_develop_management_plans
+        title: Develop incident management plans
+      - id: sec_incident_response_prepare_forensic
+        title: Prepare forensic capabilities
+      - id: sec_incident_response_auto_contain
+        title: Automate containment capability
+      - id: sec_incident_response_pre_provision_access
+        title: Pre-provision access
+      - id: sec_incident_response_pre_deploy_tools
+        title: Pre-deploy tools
+      - id: sec_incident_response_run_game_days
+        title: Run game days
+      - id: sec_incident_response_no
+        title: None of these
+reliability: 
+  - label: REL 1
+    question_id: manage-service-limits
+    title: How do you manage service quotas and constraints?
+    answers: 
+      - id: rel_manage_service_limits_aware_quotas_and_constraints
+        title: Aware of service quotas and constraints
+      - id: rel_manage_service_limits_limits_considered
+        title: Manage service quotas across accounts and regions
+      - id: rel_manage_service_limits_aware_fixed_limits
+        title: Accommodate fixed service quotas and constraints through architecture
+      - id: rel_manage_service_limits_monitor_manage_limits
+        title: Monitor and manage quotas
+      - id: rel_manage_service_limits_automated_monitor_limits
+        title: Automate quota management
+      - id: rel_manage_service_limits_suff_buffer_limits
+        title: Ensure that a sufficient gap exists between the current quotas and the maximum usage to accommodate failover
+      - id: rel_manage_service_limits_no
+        title: None of these
+  - label: REL 2
+    question_id: planning-network-topology
+    title: How do you plan your network topology?
+    answers: 
+      - id: rel_planning_network_topology_ha_conn_users
+        title: Use highly available network connectivity for your workload public endpoints
+      - id: rel_planning_network_topology_ha_conn_private_networks
+        title: Provision redundant connectivity between private networks in the cloud and on-premises environments
+      - id: rel_planning_network_topology_ip_subnet_allocation
+        title: Ensure IP subnet allocation accounts for expansion and availability
+      - id: rel_planning_network_topology_prefer_hub_and_spoke
+        title: Prefer hub-and-spoke topologies over many-to-many mesh
+      - id: rel_planning_network_topology_non_overlap_ip
+        title: Enforce non-overlapping private IP address ranges in all private address spaces where they are connected
+      - id: rel_planning_network_topology_no
+        title: None of these
+  - label: REL 3
+    question_id: service-architecture
+    title: How do you design your workload service architecture?
+    answers: 
+      - id: rel_service_architecture_monolith_soa_microservice
+        title: Choose how to segment your workload
+      - id: rel_service_architecture_business_domains
+        title: Build services focused on specific business domains and functionality
+      - id: rel_service_architecture_api_contracts
+        title: Provide service contracts per API
+      - id: rel_service_architecture_no
+        title: None of these
+  - label: REL 4
+    question_id: prevent-interaction-failure
+    title: How do you design interactions in a distributed system to prevent failures?
+    answers: 
+      - id: rel_prevent_interaction_failure_identify
+        title: Identify which kind of distributed system is required
+      - id: rel_prevent_interaction_failure_loosely_coupled_system
+        title: Implement loosely coupled dependencies
+      - id: rel_prevent_interaction_failure_constant_work
+        title: Do constant work
+      - id: rel_prevent_interaction_failure_idempotent
+        title: Make all responses idempotent
+      - id: rel_prevent_interaction_failure_no
+        title: None of these
+  - label: REL 5
+    question_id: mitigate-interaction-failure
+    title: How do you design interactions in a distributed system to mitigate or withstand failures?
+    answers: 
+      - id: rel_mitigate_interaction_failure_graceful_degradation
+        title: Implement graceful degradation to transform applicable hard dependencies into soft dependencies
+      - id: rel_mitigate_interaction_failure_throttle_requests
+        title: Throttle requests
+      - id: rel_mitigate_interaction_failure_limit_retries
+        title: Control and limit retry calls
+      - id: rel_mitigate_interaction_failure_fail_fast
+        title: Fail fast and limit queues
+      - id: rel_mitigate_interaction_failure_client_timeouts
+        title: Set client timeouts
+      - id: rel_mitigate_interaction_failure_stateless
+        title: Make services stateless where possible
+      - id: rel_mitigate_interaction_failure_emergency_levers
+        title: Implement emergency levers
+      - id: rel_mitigate_interaction_failure_no
+        title: None of these
+  - label: REL 6
+    question_id: monitor-aws-resources
+    title: How do you monitor workload resources?
+    answers: 
+      - id: rel_monitor_aws_resources_monitor_resources
+        title: Monitor all components for the workload (Generation)
+      - id: rel_monitor_aws_resources_notification_aggregation
+        title: Define and calculate metrics (Aggregation)
+      - id: rel_monitor_aws_resources_notification_monitor
+        title: Send notifications (Real-time processing and alarming)
+      - id: rel_monitor_aws_resources_automate_response_monitor
+        title: Automate responses (Real-time processing and alarming)
+      - id: rel_monitor_aws_resources_storage_analytics
+        title: Analytics
+      - id: rel_monitor_aws_resources_review_monitoring
+        title: Conduct reviews regularly
+      - id: rel_monitor_aws_resources_end_to_end
+        title: Monitor end-to-end tracing of requests through your system
+      - id: rel_monitor_aws_resources_no
+        title: None of these
+  - label: REL 7
+    question_id: adapt-to-changes
+    title: How do you design your workload to adapt to changes in demand?
+    answers: 
+      - id: rel_adapt_to_changes_autoscale_adapt
+        title: Use automation when obtaining or scaling resources
+      - id: rel_adapt_to_changes_reactive_adapt_auto
+        title: Obtain resources upon detection of impairment to a workload
+      - id: rel_adapt_to_changes_proactive_adapt_auto
+        title: Obtain resources upon detection that more resources are needed for a workload
+      - id: rel_adapt_to_changes_load_tested_adapt
+        title: Load test your workload
+      - id: rel_adapt_to_changes_no
+        title: None of these
+  - label: REL 8
+    question_id: tracking-change-management
+    title: How do you implement change?
+    answers: 
+      - id: rel_tracking_change_management_planned_changemgmt
+        title: Use runbooks for standard activities such as deployment
+      - id: rel_tracking_change_management_functional_testing
+        title: Integrate functional testing as part of your deployment
+      - id: rel_tracking_change_management_resiliency_testing
+        title: Integrate resiliency testing as part of your deployment
+      - id: rel_tracking_change_management_immutable_infrastructure
+        title: Deploy using immutable infrastructure
+      - id: rel_tracking_change_management_automated_changemgmt
+        title: Deploy changes with automation
+      - id: rel_tracking_change_management_no
+        title: None of these
+  - label: REL 9
+    question_id: backing-up-data
+    title: How do you back up data?
+    answers: 
+      - id: rel_backing_up_data_identified_backups_data
+        title: Identify and back up all data that needs to be backed up, or reproduce the data from sources
+      - id: rel_backing_up_data_secured_backups_data
+        title: Secure and encrypt backups
+      - id: rel_backing_up_data_automated_backups_data
+        title: Perform data backup automatically
+      - id: rel_backing_up_data_periodic_recovery_testing_data
+        title: Perform periodic recovery of the data to verify backup integrity and processes
+      - id: rel_backing_up_data_no
+        title: None of these
+  - label: REL 10
+    question_id: fault-isolation
+    title: How do you use fault isolation to protect your workload?
+    answers: 
+      - id: rel_fault_isolation_multiaz_region_system
+        title: Deploy the workload to multiple locations
+      - id: rel_fault_isolation_select_location
+        title: Select the appropriate locations for your multi-location deployment
+      - id: rel_fault_isolation_single_az_system
+        title: Automate recovery for components constrained to a single location
+      - id: rel_fault_isolation_use_bulkhead
+        title: Use bulkhead architectures to limit scope of impact
+      - id: rel_fault_isolation_no
+        title: None of these
+  - label: REL 11
+    question_id: withstand-component-failures
+    title: How do you design your workload to withstand component failures?
+    answers: 
+      - id: rel_withstand_component_failures_monitoring_health
+        title: Monitor all components of the workload to detect failures
+      - id: rel_withstand_component_failures_failover2good
+        title: Fail over to healthy resources
+      - id: rel_withstand_component_failures_auto_healing_system
+        title: Automate healing on all layers
+      - id: rel_withstand_component_failures_avoid_control_plane
+        title: Rely on the data plane and not the control plane during recovery
+      - id: rel_withstand_component_failures_static_stability
+        title: Use static stability to prevent bimodal behavior
+      - id: rel_withstand_component_failures_notifications_sent_system
+        title: Send notifications when events impact availability
+      - id: rel_withstand_component_failures_no
+        title: None of these
+  - label: REL 12
+    question_id: testing-resiliency
+    title: How do you test reliability?
+    answers: 
+      - id: rel_testing_resiliency_playbook_resiliency
+        title: Use playbooks to investigate failures
+      - id: rel_testing_resiliency_rca_resiliency
+        title: Perform post-incident analysis
+      - id: rel_testing_resiliency_test_functional
+        title: Test functional requirements
+      - id: rel_testing_resiliency_test_non_functional
+        title: Test scaling and performance requirements
+      - id: rel_testing_resiliency_failure_injection_resiliency
+        title: Test resiliency using chaos engineering
+      - id: rel_testing_resiliency_game_days_resiliency
+        title: Conduct game days regularly
+      - id: rel_testing_resiliency_no
+        title: None of these
+  - label: REL 13
+    question_id: planning-for-recovery
+    title: How do you plan for disaster recovery (DR)?
+    answers: 
+      - id: rel_planning_for_recovery_objective_defined_recovery
+        title: Define recovery objectives for downtime and data loss
+      - id: rel_planning_for_recovery_disaster_recovery
+        title: Use defined recovery strategies to meet the recovery objectives
+      - id: rel_planning_for_recovery_dr_tested
+        title: Test disaster recovery implementation to validate the implementation
+      - id: rel_planning_for_recovery_config_drift
+        title: Manage configuration drift at the DR site or Region
+      - id: rel_planning_for_recovery_auto_recovery
+        title: Automate recovery
+      - id: rel_planning_for_recovery_no
+        title: None of these
+operationalExcellence: 
+  - label: OPS 1
+    question_id: priorities
+    title: How do you determine what your priorities are?
+    answers: 
+      - id: ops_priorities_ext_cust_needs
+        title: Evaluate external customer needs
+      - id: ops_priorities_int_cust_needs
+        title: Evaluate internal customer needs
+      - id: ops_priorities_governance_reqs
+        title: Evaluate governance requirements
+      - id: ops_priorities_compliance_reqs
+        title: Evaluate compliance requirements
+      - id: ops_priorities_eval_threat_landscape
+        title: Evaluate threat landscape
+      - id: ops_priorities_eval_tradeoffs
+        title: Evaluate tradeoffs
+      - id: ops_priorities_manage_risk_benefit
+        title: Manage benefits and risks
+      - id: ops_priorities_no
+        title: None of these
+  - label: OPS 2
+    question_id: ops-model
+    title: How do you structure your organization to support your business outcomes?
+    answers: 
+      - id: ops_ops_model_def_resource_owners
+        title: Resources have identified owners
+      - id: ops_ops_model_def_proc_owners
+        title: Processes and procedures have identified owners
+      - id: ops_ops_model_def_activity_owners
+        title: Operations activities have identified owners responsible for their performance
+      - id: ops_ops_model_know_my_job
+        title: Team members know what they are responsible for
+      - id: ops_ops_model_find_owner
+        title: Mechanisms exist to identify responsibility and ownership
+      - id: ops_ops_model_req_add_chg_exception
+        title: Mechanisms exist to request additions, changes, and exceptions
+      - id: ops_ops_model_def_neg_team_agreements
+        title: Responsibilities between teams are predefined or negotiated
+      - id: ops_ops_model_no
+        title: None of these
+  - label: OPS 3
+    question_id: org-culture
+    title: How does your organizational culture support your business outcomes?
+    answers: 
+      - id: ops_org_culture_executive_sponsor
+        title: Executive Sponsorship
+      - id: ops_org_culture_team_emp_take_action
+        title: Team members are empowered to take action when outcomes are at risk
+      - id: ops_org_culture_team_enc_escalation
+        title: Escalation is encouraged
+      - id: ops_org_culture_effective_comms
+        title: Communications are timely, clear, and actionable
+      - id: ops_org_culture_team_enc_experiment
+        title: Experimentation is encouraged
+      - id: ops_org_culture_team_enc_learn
+        title: Team members are enabled and encouraged to maintain and grow their skill sets
+      - id: ops_org_culture_team_res_appro
+        title: Resource teams appropriately
+      - id: ops_org_culture_diverse_inc_access
+        title: Diverse opinions are encouraged and sought within and across teams
+      - id: ops_org_culture_no
+        title: None of these
+  - label: OPS 4
+    question_id: telemetry
+    title: How do you design your workload so that you can understand its state?
+    answers: 
+      - id: ops_telemetry_application_telemetry
+        title: Implement application telemetry
+      - id: ops_telemetry_workload_telemetry
+        title: Implement and configure workload telemetry
+      - id: ops_telemetry_customer_telemetry
+        title: Implement user activity telemetry
+      - id: ops_telemetry_dependency_telemetry
+        title: Implement dependency telemetry
+      - id: ops_telemetry_dist_trace
+        title: Implement transaction traceability
+      - id: ops_telemetry_no
+        title: None of these
+  - label: OPS 5
+    question_id: dev-integ
+    title: How do you reduce defects, ease remediation, and improve flow into production?
+    answers: 
+      - id: ops_dev_integ_version_control
+        title: Use version control
+      - id: ops_dev_integ_test_val_chg
+        title: Test and validate changes
+      - id: ops_dev_integ_conf_mgmt_sys
+        title: Use configuration management systems
+      - id: ops_dev_integ_build_mgmt_sys
+        title: Use build and deployment management systems
+      - id: ops_dev_integ_patch_mgmt
+        title: Perform patch management
+      - id: ops_dev_integ_share_design_stds
+        title: Share design standards
+      - id: ops_dev_integ_code_quality
+        title: Implement practices to improve code quality
+      - id: ops_dev_integ_multi_env
+        title: Use multiple environments
+      - id: ops_dev_integ_freq_sm_rev_chg
+        title: Make frequent, small, reversible changes
+      - id: ops_dev_integ_auto_integ_deploy
+        title: Fully automate integration and deployment
+      - id: ops_dev_integ_no
+        title: None of these
+  - label: OPS 6
+    question_id: mit-deploy-risks
+    title: How do you mitigate deployment risks?
+    answers: 
+      - id: ops_mit_deploy_risks_plan_for_unsucessful_changes
+        title: Plan for unsuccessful changes
+      - id: ops_mit_deploy_risks_test_val_chg
+        title: Test and validate changes
+      - id: ops_mit_deploy_risks_deploy_mgmt_sys
+        title: Use deployment management systems
+      - id: ops_mit_deploy_risks_test_limited_deploy
+        title: Test using limited deployments
+      - id: ops_mit_deploy_risks_deploy_to_parallel_env
+        title: Deploy using parallel environments
+      - id: ops_mit_deploy_risks_freq_sm_rev_chg
+        title: Deploy frequent, small, reversible changes
+      - id: ops_mit_deploy_risks_auto_integ_deploy
+        title: Fully automate integration and deployment
+      - id: ops_mit_deploy_risks_auto_testing_and_rollback
+        title: Automate testing and rollback
+      - id: ops_mit_deploy_risks_no
+        title: None of these
+  - label: OPS 7
+    question_id: ready-to-support
+    title: How do you know that you are ready to support a workload?
+    answers: 
+      - id: ops_ready_to_support_personnel_capability
+        title: Ensure personnel capability
+      - id: ops_ready_to_support_const_orr
+        title: Ensure consistent review of operational readiness
+      - id: ops_ready_to_support_use_runbooks
+        title: Use runbooks to perform procedures
+      - id: ops_ready_to_support_use_playbooks
+        title: Use playbooks to investigate issues
+      - id: ops_ready_to_support_informed_deploy_decisions
+        title: Make informed decisions to deploy systems and changes
+      - id: ops_ready_to_support_no
+        title: None of these
+  - label: OPS 8
+    question_id: workload-health
+    title: How do you understand the health of your workload?
+    answers: 
+      - id: ops_workload_health_define_workload_kpis
+        title: Identify key performance indicators
+      - id: ops_workload_health_design_workload_metrics
+        title: Define workload metrics
+      - id: ops_workload_health_collect_analyze_workload_metrics
+        title: Collect and analyze workload metrics
+      - id: ops_workload_health_workload_metric_baselines
+        title: Establish workload metrics baselines
+      - id: ops_workload_health_learn_workload_usage_patterns
+        title: Learn expected patterns of activity for workload
+      - id: ops_workload_health_workload_outcome_alerts
+        title: Alert when workload outcomes are at risk
+      - id: ops_workload_health_workload_anomaly_alerts
+        title: Alert when workload anomalies are detected
+      - id: ops_workload_health_biz_level_view_workload
+        title: 
+               Validate the achievement of outcomes and the effectiveness of KPIs and metrics
+            
+      - id: ops_workload_health_no
+        title: None of these
+  - label: OPS 9
+    question_id: operations-health
+    title: How do you understand the health of your operations?
+    answers: 
+      - id: ops_operations_health_define_ops_kpis
+        title: Identify key performance indicators
+      - id: ops_operations_health_design_ops_metrics
+        title: Define operations metrics
+      - id: ops_operations_health_collect_analyze_ops_metrics
+        title: Collect and analyze operations metrics
+      - id: ops_operations_health_ops_metric_baselines
+        title: Establish operations metrics baselines
+      - id: ops_operations_health_learn_ops_usage_patterns
+        title: Learn the expected patterns of activity for operations
+      - id: ops_operations_health_ops_outcome_alerts
+        title: Alert when operations outcomes are at risk
+      - id: ops_operations_health_ops_anomaly_alerts
+        title: Alert when operations anomalies are detected
+      - id: ops_operations_health_biz_level_view_ops
+        title: 
+               Validate the achievement of outcomes and the effectiveness of KPIs and metrics
+            
+      - id: ops_operations_health_no
+        title: None of these
+  - label: OPS 10
+    question_id: event-response
+    title: How do you manage workload and operations events?
+    answers: 
+      - id: ops_event_response_event_incident_problem_process
+        title: Use processes for event, incident, and problem management
+      - id: ops_event_response_process_per_alert
+        title: Have a process per alert
+      - id: ops_event_response_prioritize_events
+        title: Prioritize operational events based on business impact
+      - id: ops_event_response_define_escalation_paths
+        title: Define escalation paths
+      - id: ops_event_response_push_notify
+        title: Enable push notifications
+      - id: ops_event_response_dashboards
+        title: Communicate status through dashboards
+      - id: ops_event_response_auto_event_response
+        title: Automate responses to events
+      - id: ops_event_response_no
+        title: None of these
+  - label: OPS 11
+    question_id: evolve-ops
+    title: How do you evolve operations?
+    answers: 
+      - id: ops_evolve_ops_process_cont_imp
+        title: Have a process for continuous improvement
+      - id: ops_evolve_ops_perform_rca_process
+        title: Perform post-incident analysis
+      - id: ops_evolve_ops_feedback_loops
+        title: Implement feedback loops
+      - id: ops_evolve_ops_knowledge_management
+        title: Perform Knowledge Management
+      - id: ops_evolve_ops_drivers_for_imp
+        title: Define drivers for improvement
+      - id: ops_evolve_ops_validate_insights
+        title: Validate insights
+      - id: ops_evolve_ops_metrics_review
+        title: Perform operations metrics reviews
+      - id: ops_evolve_ops_share_lessons_learned
+        title: Document and share lessons learned
+      - id: ops_evolve_ops_allocate_time_for_imp
+        title: Allocate time to make improvements
+      - id: ops_evolve_ops_no
+        title: None of these
+performance: 
+  - label: PERF 1
+    question_id: performing-architecture
+    title: How do you select the best performing architecture?
+    answers: 
+      - id: perf_performing_architecture_evaluate_resources
+        title: Understand the available services and resources
+      - id: perf_performing_architecture_process
+        title: Define a process for architectural choices
+      - id: perf_performing_architecture_cost
+        title: Factor cost requirements into decisions 
+      - id: perf_performing_architecture_use_policies
+        title: Use policies or reference architectures
+      - id: perf_performing_architecture_external_guidance
+        title: Use guidance from your cloud provider or an appropriate partner
+      - id: perf_performing_architecture_benchmark
+        title: Benchmark existing workloads
+      - id: perf_performing_architecture_load_test
+        title: Load test your workload
+      - id: perf_performing_architecture_no
+        title: None of these
+  - label: PERF 2
+    question_id: select-compute
+    title: How do you select your compute solution?
+    answers: 
+      - id: perf_select_compute_evaluate_options
+        title: Evaluate the available compute options
+      - id: perf_select_compute_config_options
+        title: Understand the available compute configuration options
+      - id: perf_select_compute_collect_metrics
+        title: Collect compute-related metrics
+      - id: perf_select_compute_right_sizing
+        title: Determine the required configuration by right-sizing
+      - id: perf_select_compute_elasticity
+        title: Use the available elasticity of resources
+      - id: perf_select_compute_use_metrics
+        title: Re-evaluate compute needs based on metrics
+      - id: perf_select_compute_no
+        title: None of these
+  - label: PERF 3
+    question_id: right-storage-solution
+    title: How do you select your storage solution?
+    answers: 
+      - id: perf_right_storage_solution_understand_char
+        title: Understand storage characteristics and requirements
+      - id: perf_right_storage_solution_evaluated_options
+        title: Evaluate available configuration options
+      - id: perf_right_storage_solution_optimize_patterns
+        title: Make decisions based on access patterns and metrics
+      - id: perf_right_storage_solution_no
+        title: None of these
+  - label: PERF 4
+    question_id: right-database-solution
+    title: How do you select your database solution?
+    answers: 
+      - id: perf_right_database_solution_understand_char
+        title: Understand data characteristics
+      - id: perf_right_database_solution_evaluate_options
+        title: Evaluate the available options
+      - id: perf_right_database_solution_collect_metrics
+        title: Collect and record database performance metrics
+      - id: perf_right_database_solution_access_patterns
+        title: Choose data storage based on access patterns
+      - id: perf_right_database_solution_optimize_metrics
+        title: Optimize data storage based on access patterns and metrics
+      - id: perf_right_database_solution_no
+        title: None of these
+  - label: PERF 5
+    question_id: select-network
+    title: How do you configure your networking solution?
+    answers: 
+      - id: perf_select_network_understand_impact
+        title: Understand how networking impacts performance
+      - id: perf_select_network_evaluate_features
+        title: Evaluate available networking features
+      - id: perf_select_network_hybrid
+        title: Choose appropriately sized dedicated connectivity or VPN for hybrid workloads
+      - id: perf_select_network_encryption_offload
+        title: Leverage load-balancing and encryption offloading
+      - id: perf_select_network_protocols
+        title: Choose network protocols to improve performance
+      - id: perf_select_network_location
+        title: Choose your workload’s location based on network requirements
+      - id: perf_select_network_optimize
+        title: Optimize network configuration based on metrics
+      - id: perf_select_network_no
+        title: None of these
+  - label: PERF 6
+    question_id: continue-having-appropriate-resource-type
+    title: How do you evolve your workload to take advantage of new releases?
+    answers: 
+      - id: perf_continue_having_appropriate_resource_type_keep_up_to_date
+        title: Stay up-to-date on new resources and services
+      - id: perf_continue_having_appropriate_resource_type_define_process
+        title: Define a process to improve workload performance
+      - id: perf_continue_having_appropriate_resource_type_evolve
+        title: Evolve workload performance over time
+      - id: perf_continue_having_appropriate_resource_type_no
+        title: None of these
+  - label: PERF 7
+    question_id: monitor-instances-post-launch
+    title: How do you monitor your resources to ensure they are performing?
+    answers: 
+      - id: perf_monitor_instances_post_launch_record_metrics
+        title: Record performance-related metrics
+      - id: perf_monitor_instances_post_launch_review_metrics
+        title: Analyze metrics when events or incidents occur
+      - id: perf_monitor_instances_post_launch_establish_kpi
+        title: Establish Key Performance Indicators (KPIs) to measure workload performance
+      - id: perf_monitor_instances_post_launch_generate_alarms
+        title: Use monitoring to generate alarm-based notifications
+      - id: perf_monitor_instances_post_launch_review_metrics_collected
+        title: Review metrics at regular intervals
+      - id: perf_monitor_instances_post_launch_proactive
+        title: Monitor and alarm proactively
+      - id: perf_monitor_instances_post_launch_no
+        title: None of these
+  - label: PERF 8
+    question_id: tradeoffs-performance
+    title: How do you use tradeoffs to improve performance?
+    answers: 
+      - id: perf_tradeoffs_performance_critical_areas
+        title: Understand the areas where performance is most critical
+      - id: perf_tradeoffs_performance_design_patterns
+        title: Learn about design patterns and services
+      - id: perf_tradeoffs_performance_understand_impact
+        title: Identify how tradeoffs impact customers and efficiency
+      - id: perf_tradeoffs_performance_measure
+        title: Measure the impact of performance improvements
+      - id: perf_tradeoffs_performance_implement_strategy
+        title: Use various performance-related strategies
+      - id: perf_tradeoffs_performance_no
+        title: None of these
+costOptimization: 
+  - label: COST 1
+    question_id: cloud-financial-management
+    title: How do you implement cloud financial management?
+    answers: 
+      - id: cost_cloud_financial_management_function
+        title: Establish a cost optimization function
+      - id: cost_cloud_financial_management_partnership
+        title: Establish a partnership between finance and technology
+      - id: cost_cloud_financial_management_budget_forecast
+        title: Establish cloud budgets and forecasts
+      - id: cost_cloud_financial_management_cost_awareness
+        title: Implement cost awareness in your organizational processes
+      - id: cost_cloud_financial_management_usage_report
+        title: Report and notify on cost optimization
+      - id: cost_cloud_financial_management_proactive_process
+        title: Monitor cost proactively
+      - id: cost_cloud_financial_management_scheduled
+        title: Keep up to date with new service releases
+      - id: cost_cloud_financial_management_no
+        title: None of these
+  - label: COST 2
+    question_id: govern-usage
+    title: How do you govern usage?
+    answers: 
+      - id: cost_govern_usage_policies
+        title: Develop policies based on your organization requirements
+      - id: cost_govern_usage_goal_target
+        title: Implement goals and targets
+      - id: cost_govern_usage_account_structure
+        title: Implement an account structure
+      - id: cost_govern_usage_groups_roles
+        title: Implement groups and roles
+      - id: cost_govern_usage_controls
+        title: Implement cost controls
+      - id: cost_govern_usage_track_lifecycle
+        title: Track project lifecycle
+      - id: cost_govern_usage_no
+        title: None of these
+  - label: COST 3
+    question_id: monitor-usage
+    title: How do you monitor usage and cost?
+    answers: 
+      - id: cost_monitor_usage_detailed_source
+        title: Configure detailed information sources
+      - id: cost_monitor_usage_define_attribution
+        title: Identify cost attribution categories
+      - id: cost_monitor_usage_define_kpi
+        title: Establish organization metrics
+      - id: cost_monitor_usage_config_tools
+        title: Configure billing and cost management tools
+      - id: cost_monitor_usage_org_information
+        title: Add organization information to cost and usage
+      - id: cost_monitor_usage_allocate_outcome
+        title: Allocate costs based on workload metrics
+      - id: cost_monitor_usage_no
+        title: None of these
+  - label: COST 4
+    question_id: decomissioning-resources
+    title: How do you decommission resources?
+    answers: 
+      - id: cost_decomissioning_resources_track
+        title: Track resources over their life time
+      - id: cost_decomissioning_resources_implement_process
+        title: Implement a decommissioning process
+      - id: cost_decomissioning_resources_decommission
+        title: Decommission resources
+      - id: cost_decomissioning_resources_decomm_automated
+        title: Decommission resources automatically
+      - id: cost_decomissioning_resources_no
+        title: None of these
+  - label: COST 5
+    question_id: select-service
+    title: How do you evaluate cost when you select services?
+    answers: 
+      - id: cost_select_service_requirements
+        title: Identify organization requirements for cost
+      - id: cost_select_service_analyze_all
+        title: Analyze all components of this workload
+      - id: cost_select_service_thorough_analysis
+        title: Perform a thorough analysis of each component
+      - id: cost_select_service_licensing
+        title: Select software with cost effective licensing
+      - id: cost_select_service_select_for_cost
+        title: Select components of this workload to optimize cost in line with organization priorities
+      - id: cost_select_service_analyze_over_time
+        title: Perform cost analysis for different usage over time
+      - id: cost_select_service_no
+        title: None of these
+  - label: COST 6
+    question_id: type-size-number-resources
+    title: How do you meet cost targets when you select resource type, size and number?
+    answers: 
+      - id: cost_type_size_number_resources_cost_modeling
+        title: Perform cost modeling
+      - id: cost_type_size_number_resources_data
+        title: Select resource type, size, and number based on data
+      - id: cost_type_size_number_resources_metrics
+        title: Select resource type, size, and number automatically based on metrics
+      - id: cost_type_size_number_resources_no
+        title: None of these
+  - label: COST 7
+    question_id: pricing-model
+    title: How do you use pricing models to reduce cost?
+    answers: 
+      - id: cost_pricing_model_analysis
+        title: Perform pricing model analysis
+      - id: cost_pricing_model_region_cost
+        title: Implement regions based on cost
+      - id: cost_pricing_model_third_party
+        title: Select third party agreements with cost efficient terms
+      - id: cost_pricing_model_implement_models
+        title: Implement pricing models for all components of this workload
+      - id: cost_pricing_model_master_analysis
+        title: Perform pricing model analysis at the master account level
+      - id: cost_pricing_model_no
+        title: None of these
+  - label: COST 8
+    question_id: data-transfer
+    title: How do you plan for data transfer charges?
+    answers: 
+      - id: cost_data_transfer_modeling
+        title: Perform data transfer modeling
+      - id: cost_data_transfer_optimized_components
+        title: Select components to optimize data transfer cost
+      - id: cost_data_transfer_implement_services
+        title: Implement services to reduce data transfer costs
+      - id: cost_data_transfer_no
+        title: None of these
+  - label: COST 9
+    question_id: manage-demand-resources
+    title: How do you manage demand, and supply resources?
+    answers: 
+      - id: cost_manage_demand_resources_cost_analysis
+        title: Perform an analysis on the workload demand
+      - id: cost_manage_demand_resources_buffer_throttle
+        title: Implement a buffer or throttle to manage demand
+      - id: cost_manage_demand_resources_dynamic
+        title: Supply resources dynamically
+      - id: cost_manage_demand_resources_no
+        title: None of these
+  - label: COST 10
+    question_id: evaluate-new-services
+    title: How do you evaluate new services?
+    answers: 
+      - id: cost_evaluate_new_services_review_process
+        title: Develop a workload review process
+      - id: cost_evaluate_new_services_review_workload
+        title: Review and analyze this workload regularly
+      - id: cost_evaluate_new_services_no
+        title: None of these
+sustainability: 
+  - label: SUS 1
+    question_id: sus_region
+    title: How do you select Regions to support your sustainability goals?
+    answers: 
+      - id: sus_sus_region_a2
+        title: Choose Regions near Amazon renewable energy projects and Regions where the grid has a published carbon intensity that is lower than other locations (or Regions).
+      - id: sus_sus_region_no
+        title: None of these
+  - label: SUS 2
+    question_id: sus_user
+    title: How do you take advantage of user behavior patterns to support your sustainability goals?
+    answers: 
+      - id: sus_sus_user_a2
+        title: Scale infrastructure with user load
+      - id: sus_sus_user_a3
+        title: Align SLAs with sustainability goals
+      - id: sus_sus_user_a4
+        title: Stop the creation and maintenance of unused assets
+      - id: sus_sus_user_a5
+        title: Optimize geographic placement of workloads for user locations
+      - id: sus_sus_user_a6
+        title: Optimize team member resources for activities performed
+      - id: sus_sus_user_no
+        title: None of these
+  - label: SUS 3
+    question_id: sus_software
+    title: How do you take advantage of software and architecture patterns to support your sustainability goals?
+    answers: 
+      - id: sus_sus_software_a2
+        title: Optimize software and architecture for asynchronous and scheduled jobs
+      - id: sus_sus_software_a3
+        title: Remove or refactor workload components with low or no use
+      - id: sus_sus_software_a4
+        title: Optimize areas of code that consume the most time or resources
+      - id: sus_sus_software_a5
+        title: Optimize impact on customer devices and equipment
+      - id: sus_sus_software_a6
+        title: Use software patterns and architectures that best support data access and storage patterns
+      - id: sus_sus_software_no
+        title: None of these
+  - label: SUS 4
+    question_id: sus_data
+    title: How do you take advantage of data access and usage patterns to support your sustainability goals?
+    answers: 
+      - id: sus_sus_data_a2
+        title: Implement a data classification policy
+      - id: sus_sus_data_a3
+        title: Use technologies that support data access and storage patterns
+      - id: sus_sus_data_a4
+        title: Use lifecycle policies to delete unnecessary data
+      - id: sus_sus_data_a5
+        title: Minimize over-provisioning in block storage
+      - id: sus_sus_data_a6
+        title: Remove unneeded or redundant data
+      - id: sus_sus_data_a7
+        title: Use shared file systems or object storage to access common data
+      - id: sus_sus_data_a8
+        title: Minimize data movement across networks
+      - id: sus_sus_data_a9
+        title: Back up data only when difficult to recreate
+      - id: sus_sus_data_no
+        title: None of these
+  - label: SUS 5
+    question_id: sus_hardware
+    title: How do your hardware management and usage practices support your sustainability goals?
+    answers: 
+      - id: sus_sus_hardware_a2
+        title: Use the minimum amount of hardware to meet your needs
+      - id: sus_sus_hardware_a3
+        title: Use instance types with the least impact
+      - id: sus_sus_hardware_a4
+        title: Use managed services
+      - id: sus_sus_hardware_a5
+        title: Optimize your use of GPUs
+      - id: sus_sus_hardware_no
+        title: None of these
+  - label: SUS 6
+    question_id: sus_dev
+    title: How do your development and deployment processes support your sustainability goals?
+    answers: 
+      - id: sus_sus_dev_a2
+        title: Adopt methods that can rapidly introduce sustainability improvements
+      - id: sus_sus_dev_a3
+        title: Keep your workload up to date
+      - id: sus_sus_dev_a4
+        title: Increase utilization of build environments
+      - id: sus_sus_dev_a5
+        title: Use managed device farms for testing
+      - id: sus_sus_dev_no
+        title: None of these
