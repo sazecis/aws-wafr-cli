@@ -50,8 +50,11 @@ def main():
     publish_lens_parser.set_defaults(func=publish_lens)
 
     args = parser.parse_args()
-    args.func(args)
-
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_help()
+        
 def manage_template(args):
     template.start_generation(
         workload_id=args.workloadid, 
