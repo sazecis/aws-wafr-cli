@@ -34,6 +34,8 @@ def load_template(lens_file_path):
     return json_content
 
 def get_lens_alias(lens_name):
+    if lens_name == conf.STANDARD_LENS_ALIAS:
+        return lens_name
     lenses = well_architected_tool_client.list_lenses()
     for lens in lenses['LensSummaries']:
         if lens['LensName'] == lens_name:
