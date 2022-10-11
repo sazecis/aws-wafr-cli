@@ -102,7 +102,10 @@ def add_new_line(index, last_index):
     
 def append_answers(template, question, save_workload, question_details):
     append_answers_header(template)
-    marked_answers = question_details['ChoiceAnswers']
+    if 'ChoiceAnswers' in question_details:
+        marked_answers = question_details['ChoiceAnswers']
+    else:
+        marked_answers = []
     for answers in question['Choices']:
         append_answer_id(template, answer_id=answers['ChoiceId'])
         append_answer_title(template, answers['Title'])
