@@ -90,7 +90,7 @@ Create workload can be used to generate new workload in the currently configured
 lens.
 
 ```sh
-wafr-cli.py create-workload [-h] -t TEMPLATE_FILE_PATH -w WORKLOADNAME -d DESCRIPTION -e {prod,pre-prod} [-a [ACCOUNTIDS ...]] [-r [REGIONS ...]] -o REVIEWOWNER [-ds]
+wafr-cli.py create-workload [-h] -t TEMPLATE_FILE_PATH -w WORKLOADNAME -d DESCRIPTION -e {prod,pre-prod} [-a [ACCOUNTIDS ...]] [-r [REGIONS ...]] -o REVIEWOWNER [-ds] [-ta {enable,disable}]
 ```
 
 ```sh
@@ -112,6 +112,8 @@ optional arguments:
                         The name of the reviewer who created this WAFR workload.
   -ds, --disablestandard
                         Disable the questions from the standard lens. Usable when the workload is created with custom lens.
+  -ta {enable,disable}, --trustedadvisor {enable,disable}
+                        Enable or disable the Trusted Advisor integration [enable, disable]
 ```
 
 ### Updating existing workloads
