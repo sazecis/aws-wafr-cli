@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+wafr-cli.py
+.vscode/launch.json

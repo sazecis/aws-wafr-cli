@@ -31,6 +31,7 @@ def main():
     create_workload_parser.add_argument('-r', '--regions', help='The regions where the workload is running. e.g. eu-central-1.', nargs='*', default=['eu-central-1'])
     create_workload_parser.add_argument('-o', '--reviewowner', help='The name of the reviewer who created this WAFR workload.', required=True)
     create_workload_parser.add_argument('-ds', '--disablestandard', action='store_true', help='Disable the questions from the standard lens. Usable when the workload is created with custom lens. Ineffectiv with standard lens.')
+    create_workload_parser.add_argument('-ta', '--trustedadvisor', help='Enable or disable the Trusted Advisor integration [enable, disable]', choices=['enable','disable'])
     create_workload_parser.set_defaults(func=create_new_workload)
 
     update_workload_parser = subparsers.add_parser(
@@ -72,7 +73,8 @@ def create_new_workload(args):
         account_ids=args.accountids, 
         regions=args.regions, 
         review_owner=args.reviewowner,
-        disable_standard= args.disablestandard)
+        disable_standard= args.disablestandard,
+        trusted_advisor=args.trustedadvisor)
 
 def update_workload(args):
     workload.update_existing_workload(

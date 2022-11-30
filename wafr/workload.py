@@ -8,7 +8,7 @@ import wafr.lens as lens
 
 well_architected_tool_client = boto3.client('wellarchitected')
 
-def create_new_workload(template_file_path, workload_name, description, environment, account_ids, regions, review_owner, disable_standard):
+def create_new_workload(template_file_path, workload_name, description, environment, account_ids, regions, review_owner, disable_standard, trusted_advisor):
     template = get_template_content(template_file_path)
     lens_alias = get_lens_alias(template_file_path)
     if not lens_alias:
@@ -23,7 +23,10 @@ def create_new_workload(template_file_path, workload_name, description, environm
             ReviewOwner=review_owner,
             PillarPriorities=['security', 'reliability', 'operationalExcellence', 'performance', 'costOptimization', 'sustainability'],
             Lenses=[lens_alias],
-            ClientRequestToken=str(datetime.now())
+            ClientRequestToken=str(datetime.now()),
+            DiscoveryConfig={
+                'TrustedAdvisorIntegrationStatus': 'ENABLED' if trusted_advisor == 'enable' else 'DISABLED'
+            }
         )
         workload_id = workload['WorkloadId']
         if disabling_standard_lens(disable_standard, lens_alias):
